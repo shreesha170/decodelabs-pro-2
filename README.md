@@ -83,4 +83,6 @@ Through this project, the following concepts were practiced:
 
 ## Author
 
+**Shreesha P**
+
 Created as part of a Responsive Web Layout project to demonstrate frontend development skills using pure HTML and CSS.
