@@ -1,0 +1,199 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  background: #1e293b;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.nav-links a {
+  padding: 0.8rem;
+}
+
+#menu-toggle:checked + .hamburger + .nav-links {
+  display: flex;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.hero p {
+  margin: 1rem auto;
+  max-width: 700px;
+}
+
+.hero button {
+  background: #2563eb;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin: 1rem 0;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* BREAKPOINTS */
+
+@media (min-width: 480px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: transparent;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .main-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
